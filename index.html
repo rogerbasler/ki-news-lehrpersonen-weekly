@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Wöchentliche KI-News für Lehrpersonen - Aktuelle Entwicklungen, Tools und Regulierungen im Bildungsbereich">
+    <meta name="keywords" content="KI, Künstliche Intelligenz, Bildung, Schule, Lehrpersonen, DACH">
+    <meta name="author" content="Roger Basler de Roca">
+    <title>Wöchentliche KI-News für Lehrpersonen | Stand: 15. September 2025</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 10px;
+        }
+
+        .header .date {
+            font-size: 1.1rem;
+            color: #667eea;
+            font-weight: 500;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .section-icon {
+            font-size: 2rem;
+            margin-right: 15px;
+        }
+
+        .section h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #2d3748;
+        }
+
+        .article {
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .article:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        .article h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .article p {
+            color: #4a5568;
+            margin-bottom: 10px;
+        }
+
+        .article-meta {
+            font-size: 0.9rem;
+            color: #667eea;
+            font-weight: 500;
+        }
+
+        .article-meta a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        .article-meta a:hover {
+            text-decoration: underline;
+        }
+
+        .podcast-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .podcast-section h2 {
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .podcast-link {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .podcast-link:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .footer {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            margin-top: 40px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer p {
+            color: #4a5568;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+
+            .header {
+                padding: 30px 20px;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .section {
+                padding: 25px 20px;
+            }
+
+            .section-header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .section-icon {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 1.8rem;
+            }
+
+            .section {
+                padding: 20px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Wöchentliche KI-News für Lehrpersonen</h1>
+            <p class="date">Stand: 15. September 2025</p>
+        </header>
+
+        <div class="content-grid">
+            <section class="section">
+                <div class="section-header">
+                    <span class="section-icon">🧠</span>
+                    <h2>Wichtige Entwicklungen der Woche</h2>
+                </div>
+                
+                <article class="article">
+                    <h3>Offenes Schweizer LLM "Apertus" am Start</h3>
+                    <p>Das offene Sprachmodell Apertus aus der Schweiz wurde von Forschenden der ETH Zürich und EPFL Lausanne auf dem Supercomputer Alps trainiert und veröffentlicht. Apertus steht in zwei frei verfügbaren Modellgrössen bereit – mit 8 Milliarden sowie mit 70 Milliarden Parametern. Diese Entwicklung ist besonders für den DACH-Raum relevant, da es sich um ein europäisches, offenes Sprachmodell handelt.</p>
+                    <p class="article-meta">Quelle: <a href="https://www.unidigital.news/" target="_blank">unidigital.news</a> - 9. September 2025</p>
+                </article>
+            </section>
+
+            <section class="section">
+                <div class="section-header">
+                    <span class="section-icon">🛠️</span>
+                    <h2>Neue Tools und Praxisbeispiele</h2>
+                </div>
+                
+                <article class="article">
+                    <h3>KI-Agenten im Klassenzimmer revolutionieren das Lernen</h3>
+                    <p>KI-Agenten bieten personalisiertes Lernen und Echtzeit-Feedback im Klassenzimmer. Diese Tools ermöglichen es Lehrkräften, individuell auf die Bedürfnisse ihrer Schülerinnen und Schüler einzugehen. Der Artikel erklärt, wie diese Technologien verantwortungsvoll eingesetzt werden können und welche Herausforderungen dabei zu meistern sind.</p>
+                    <p class="article-meta">Quelle: <a href="https://www.lehrer-news.de/" target="_blank">lehrer-news.de</a> - 12. September 2025</p>
+                </article>
+
+                <article class="article">
+                    <h3>Audio Expressions: Hochwertige KI-Stimmen im Microsoft Copilot</h3>
+                    <p>Microsoft Copilot ermöglicht es Nutzern aktuell ohne Anmeldung, hochwertige KI-Stimmen zu generieren, die dann zum Download bereitstehen. Es gibt vielfältige Settings, vom Storytelling über sachliche News-Berichterstattung bis hin zum süffisanten Vampire-Style. Dies eröffnet neue Möglichkeiten für die Erstellung von Unterrichtsmaterialien.</p>
+                    <p class="article-meta">Quelle: <a href="https://www.unidigital.news/" target="_blank">unidigital.news</a> - 11. September 2025</p>
+                </article>
+            </section>
+
+            <section class="section">
+                <div class="section-header">
+                    <span class="section-icon">🏛️</span>
+                    <h2>Politik & Regulierung</h2>
+                </div>
+                
+                <article class="article">
+                    <h3>Datenschutz-Beauftragte warnt vor unbedachter iCloud-Nutzung</h3>
+                    <p>Die Landesbeauftragte für Datenschutz und Informationsfreiheit in Nordrhein-Westfalen (LDI NRW), Bettina Gayk, gibt Schulen und Schulträgern zum Start des neuen Schuljahres deutliche Hinweise zur iCloud-Nutzung bei iPads im Unterricht. Diese Warnung unterstreicht die Wichtigkeit des Datenschutzes beim Einsatz digitaler Tools in Schulen.</p>
+                    <p class="article-meta">Quelle: <a href="https://www.news4teachers.de/" target="_blank">news4teachers.de</a> - 14. September 2025</p>
+                </article>
+
+                <article class="article">
+                    <h3>GEW fordert neue Lernkultur und Prüfungsformate</h3>
+                    <p>In Zeiten von Künstlicher Intelligenz können Prüfungen abfotografiert und in KI-Programme geladen werden, um Ergebnisse zu erhalten. Die Gewerkschaft Erziehung und Wissenschaft (GEW) fordert als Reaktion auf diese KI-Entwicklungen eine neue Lernkultur und neue Prüfungsformate.</p>
+                    <p class="article-meta">Quelle: <a href="https://www.news4teachers.de/" target="_blank">news4teachers.de</a> - 9. September 2025</p>
+                </article>
+            </section>
+
+            <section class="section">
+                <div class="section-header">
+                    <span class="section-icon">💬</span>
+                    <h2>Stimmen aus der Praxis</h2>
+                </div>
+                
+                <article class="article">
+                    <h3>Glaubenskrieg um KI im Unterricht: Verbannen oder Pflicht?</h3>
+                    <p>Die Bildungsdebatte bekommt ein neues Streitthema: der Einsatz von Künstlicher Intelligenz in der Schule. Während der Augsburger Schulpädagoge Prof. Klaus Zierer vor einem "Digitalisierungswahn" warnt und ChatGPT am liebsten ganz aus den Klassenzimmern verbannen würde, fordern Digital-Experten eine KI-Pflicht. Diese kontroverse Diskussion zeigt die unterschiedlichen Ansichten in der Bildungslandschaft.</p>
+                    <p class="article-meta">Quelle: <a href="https://www.news4teachers.de/" target="_blank">news4teachers.de</a> - 11. September 2025</p>
+                </article>
+            </section>
+
+            <section class="section">
+                <div class="section-header">
+                    <span class="section-icon">📚</span>
+                    <h2>Was bedeutet das für den Unterricht?</h2>
+                </div>
+                
+                <article class="article">
+                    <h3>Neue Medienkompetenz wird zur Schlüsselqualifikation</h3>
+                    <p>Die Entwicklungen der vergangenen Woche zeigen deutlich: Medienkompetenz im Umgang mit KI wird zur Schlüsselqualifikation für Lehrpersonen und Schülerinnen und Schüler. Die Fähigkeit, KI-generierte Inhalte zu erkennen, zu bewerten und verantwortungsvoll zu nutzen, wird immer wichtiger.</p>
+                </article>
+
+                <article class="article">
+                    <h3>Datenschutz und Ethik im Fokus</h3>
+                    <p>Die Warnungen der Datenschutz-Beauftragten zeigen, dass beim Einsatz von KI-Tools in Schulen besondere Vorsicht geboten ist. Lehrpersonen müssen sich intensiv mit den rechtlichen und ethischen Aspekten auseinandersetzen, bevor sie neue Technologien im Unterricht einsetzen.</p>
+                </article>
+
+                <article class="article">
+                    <h3>Individualisierung durch KI-Agenten</h3>
+                    <p>KI-Agenten bieten grosse Chancen für die Individualisierung des Lernens. Sie können Lehrkräfte dabei unterstützen, auf die unterschiedlichen Bedürfnisse ihrer Schülerinnen und Schüler einzugehen und personalisiertes Feedback zu geben.</p>
+                </article>
+            </section>
+        </div>
+
+        <section class="section podcast-section">
+            <div class="section-header">
+                <span class="section-icon">🎧</span>
+                <h2>Mehr Informationen und Diskussion</h2>
+            </div>
+            <p>Hören Sie unseren Podcast für weitere Einblicke und Diskussionen:</p>
+            <a href="http://www.klasse-ki.com" target="_blank" class="podcast-link">
+                www.klasse-ki.com - "dein Podcast für Schule, Weiterbildung und KI"
+            </a>
+        </section>
+
+        <footer class="footer">
+            <p>Diese Zusammenfassung basiert auf Artikeln der letzten 7 Tage (8.-15. September 2025) aus den Quellen unidigital.news, news4teachers.de, t3n.de und lehrer-news.de.</p>
+            <p style="margin-top: 15px; font-size: 0.8rem;">Erstellt von Roger Basler de Roca | Letzte Aktualisierung: 15. September 2025</p>
+        </footer>
+    </div>
+</body>
+</html>
